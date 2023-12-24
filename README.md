@@ -25,35 +25,33 @@ Once you have Vimium installed, you can see this list of key bindings at any tim
 
 Navigating the current page:
 
-    ?       show the help dialog for a list of all available keys
-    h       scroll left
-    j       scroll down
-    k       scroll up
-    l       scroll right
-    gg      scroll to top of the page
-    G       scroll to bottom of the page
-    d       scroll down half a page
-    u       scroll up half a page
-    f       open a link in the current tab
-    F       open a link in a new tab
-    r       reload
-    gs      view source
-    i       enter insert mode -- all commands will be ignored until you hit Esc to exit
-    yy      copy the current url to the clipboard
-    yf      copy a link url to the clipboard
-    gf      cycle forward to the next frame
-    gF      focus the main/top frame
+    <c-h>       show the help dialog for a list of all available keys
+    <c-b>       scroll left
+    <c-n>       scroll down
+    <c-p>       scroll up
+    <c-f>       scroll right
+    <c-m-,>     scroll to top of the page
+    <c-m-.>     scroll to bottom of the page
+    <c-v>       scroll down half a page
+    <m-v>       scroll up half a page
+    <c-x><c-f>  open a link in the current tab
+    <c-x><a-F>  open a link in a new tab
+    <m-r>       reload
+    <a-s>       view source
+    <c-g><c-u>  copy the current url to the clipboard
+    <c-g><c-l>  copy a link url to the clipboard
+    <c-x>o      cycle forward to the next frame
 
 Navigating to new pages:
 
-    o       Open URL, bookmark, or history entry
-    O       Open URL, bookmark, history entry in a new tab
-    b       Open bookmark
-    B       Open bookmark in a new tab
+    <c-x><c-d>  Open URL, bookmark, or history entry
+    <c-x><c-D>  Open URL, bookmark, history entry in a new tab
+    <c-x><c-b>  Open bookmark
+    <c-x><c-B>  Open bookmark in a new tab
 
 Using find:
 
-    /       enter find mode
+    <c-s>       enter find mode
               -- type your search query and hit enter to search, or Esc to cancel
     n       cycle forward to the next find match
     N       cycle backward to the previous find match
@@ -63,23 +61,22 @@ wiki.
 
 Navigating your history:
 
-    H       go back in history
-    L       go forward in history
+    <c-m-b>       go back in history
+    <c-m-f>       go forward in history
 
 Manipulating tabs:
 
-    J, gT   go one tab left
-    K, gt   go one tab right
-    g0      go to the first tab. Use ng0 to go to n-th tab
-    g$      go to the last tab
-    ^       visit the previously-visited tab
-    t       create tab
-    yt      duplicate current tab
-    x       close current tab
-    X       restore closed tab (i.e. unwind the 'x' command)
-    T       search through your open tabs
-    W       move current tab to new window
-    <a-p>   pin/unpin current tab
+    <c-b>          go one tab left
+    <c-f>          go one tab right
+    <c-x><up>      go to the first tab
+    <c-x><down>    go to the last tab
+    <c-g><c-t>     create tab
+    <c-x>4         duplicate current tab
+    <c-x>0         close current tab
+    <c-g><c-r>     restore closed tab (i.e. unwind the 'x' command)
+    <c-x>b         search through your open tabs
+    <c-x>5         move current tab to new window
+    <a-p>          pin/unpin current tab
 
 Using marks:
 
@@ -90,18 +87,18 @@ Using marks:
 
 Additional advanced browsing commands:
 
-    ]], [[  Follow the link labeled 'next' or '>' ('previous' or '<')
+    <c-g><left>, <c-g><right>  
+              Follow the link labeled 'next' or '>' ('previous' or '<')
               - helpful for browsing paginated sites
     <a-f>   open multiple links in a new tab
-    gi      focus the first (or n-th) text input box on the page. Use <tab> to cycle through options.
-    gu      go up one level in the URL hierarchy
-    gU      go up to root of the URL hierarchy
-    ge      edit the current URL
-    gE      edit the current URL and open in a new tab
-    zH      scroll all the way left
-    zL      scroll all the way right
-    v       enter visual mode; use p/P to paste-and-go, use y to yank
-    V       enter visual line mode
+    <c-g><c-f>  focus the first (or n-th) text input box on the page
+    <c-g><      go up one level in the URL hierarchy
+    <c-g>/      go up to root of the URL hierarchy
+    <c-x>e      edit the current URL
+    <c-x>E      edit the current URL and open in a new tab
+
+<c-x><      scroll all the way left
+    <c-x>>      scroll all the way right
 
 Vimium supports command repetition so, for example, hitting `5t` will open 5 tabs in rapid
 succession. `<Esc>` (or `<c-[>`) will clear any partial commands in the queue and will also exit
